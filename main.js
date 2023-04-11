@@ -21,4 +21,10 @@ window.onload = () => {
   };
 
   const game = new Game(canvas.width, canvas.height);
+
+  const animate = () => {
+    game.draw(ctx);
+    requestAnimationFrame(animate);
+  };
+  animate();
 };
